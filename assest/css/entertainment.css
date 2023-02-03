@@ -1,0 +1,168 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+#aciv{
+  background-image: url(https://cdn.cloudflare.steamstatic.com/steam/apps/242050/ss_1731a6467ede27fa624caa1b23332307b2149257.1920x1080.jpg?t=1616174462)
+}
+
+#rdr2{
+  background-image: url(https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/ss_668dafe477743f8b50b818d5bbfcec669e9ba93e.1920x1080.jpg?t=1656615305)
+}
+footer { width:100%; position:fixed; bottom: -15px; text-align: center;
+  background: #1f1f25; color: #fff; padding: 1em 0em 1em 0em;
+  font-family: sans-serif;
+}
+a { color: #cdefff; text-decoration: none;}
+
+#gtav{
+  background-image: url(https://cdn.cloudflare.steamstatic.com/steam/apps/271590/ss_cd721eb1856f0dd3b820e4e998c3b5fe7e7c9b4e.1920x1080.jpg?t=1618856444)
+}
+
+#codmw2{
+  background-image: url(https://cdn.cloudflare.steamstatic.com/steam/apps/1938090/ss_2d07e12de41060e3aa700b1a207e04ad92175aa4.1920x1080.jpg?t=1660773037)
+}
+
+#aco{
+  background-image: url(https://cdn.cloudflare.steamstatic.com/steam/apps/582160/ss_c4a4545f51c6836ac11c31427944fc7df813edfb.1920x1080.jpg?t=1603213581)
+}
+
+#wd2{
+  background-image: url(https://cdn.cloudflare.steamstatic.com/steam/apps/447040/ss_3466ea1a9e73594961b9f73fd560f379f7f49870.1920x1080.jpg?t=1602605654)
+}
+.container{
+  width:100%;
+  height: fit-content;
+  background: grey;
+  font-family: 'Roboto', sans-serif;
+  padding: 4rem 0;
+  
+  
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content:center;
+  gap: 30px 20px;
+  align-items: center;
+}
+
+
+.game-card{
+  overflow:hidden;
+  outline: 1px solid grey;
+  background-position: center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  width: 375px;
+  height: 540px;
+  padding:25px 30px 35px 25px;
+  display:flex;
+  border-radius:15px;
+  justify-content: flex-end;
+  position:relative;
+  z-index:1;
+  cursor:pointer;
+  gap: 1rem;
+  position: relative;
+  transition: outline 500ms ease;
+}
+
+.game-card::before{
+  z-index:-1;
+  content : '';
+  position:absolute;
+  height:100%;
+  width: 100%;
+  background-image : linear-gradient(rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0,0), rgb(0,0,0, 0.7));
+  left:0;
+  bottom:0;
+  border-radius:15px;
+  transition: background-image 2s ease;
+}
+
+.game-card h1{
+  font-size:1.5rem;
+  transform: translate(0, );
+/*   position: absolute; */
+/*   padding-right: inherit; */
+  transition: 500ms ease;
+}
+
+.game-card p{
+  color:white;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: 500ms ease;
+}
+
+.game-card a{
+  text-decoration: none;
+  color: white;
+  background-color: rgb(255, 255, 255, 0.1);
+  display:flex;
+  width:  fit-content;
+  padding: 1% 3%;
+  border-radius: 15px;
+  
+  opacity: 0;
+  transform: translateY(100%);
+  transition: translate 500ms ease -500ms;
+  transition: outline 500ms ease;
+}
+
+.game-card a:hover{
+  outline: 1px solid white;
+}
+
+.game-card:hover{
+  outline: 1px solid white;
+}
+
+.game-card:hover::before{
+  background-image: linear-gradient( rgb(0,0,0,0), rgb(0,0,0,0.7));
+  outline: 2px solid white;
+}
+
+.game-card:hover h1{
+/*   transform: translateY(0); */
+  position: relative;
+}
+
+.game-card:hover p{
+  transform: translateY(0);
+  opacity:1;
+}
+
+.game-card:hover a{
+  transform: translateY(0);
+  opacity:1;
+  transition : 500ms ease 500ms, outline 500ms ease;
+}
+
+@media (min-width: 375px){
+  .container{
+    grid-template-columns: auto
+  }
+}
+
+@media (min-width: 800px){
+  .container{
+    grid-template-columns: auto auto
+  }
+}
+
+@media (min-width: 1200px){
+  .container{
+    grid-template-columns: auto auto auto
+  }
+}
+
+@media (min-width: 1600px){
+  .container{
+    grid-template-columns: auto auto auto auto;
+  }
+}
